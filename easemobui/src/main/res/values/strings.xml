@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">环信UI</string>
+    <string name="em_common_back">返回</string>
+    <string name="em_common_enter">确定</string>
+    <string name="em_common_cancel">取消</string>
+    <string name="em_common_title">标题</string>
+</resources>
