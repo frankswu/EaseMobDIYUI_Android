@@ -31,7 +31,9 @@ proguard/
 
 #iml
 *.iml
-*/*.iml
+app/*.iml
+easemobui/*.iml
+
 
 #gradlew
 gradlew
