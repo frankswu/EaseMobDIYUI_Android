@@ -10,6 +10,8 @@ import android.widget.TextView;
  */
 public class EM_IconView extends TextView {
 
+    public static final String EM_CHAT_ICON_FONT_NAME = "em_chat_icon";
+
     private static Typeface iconFont;
 
     public  EM_IconView(Context context){
@@ -31,7 +33,7 @@ public class EM_IconView extends TextView {
         if (iconFont == null){
             synchronized (EM_IconView.class) {
                 if (iconFont == null && context != null) {
-                    iconFont = Typeface.createFromAsset(context.getAssets(),"em_chat_icon.ttf");
+                    iconFont = Typeface.createFromAsset(context.getAssets(),EM_CHAT_ICON_FONT_NAME + ".ttf");
                 }
             }
         }

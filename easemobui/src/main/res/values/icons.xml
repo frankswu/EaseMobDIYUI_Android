@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="em_chat_icon_tool_voice">\ue600</string>
+    <string name="em_chat_icon_tool_face">\ue601</string>
+    <string name="em_chat_icon_tool_action">\ue602</string>
+    <string name="em_chat_icon_tool_keyboard">\ue603</string>
+    <string name="em_chat_icon_tool_down">\ue604</string>
+    <string name="em_chat_icon_tool_up">\ue605</string>
+
+    <string name="em_chat_icon_action_image">\ue606</string>
+    <string name="em_chat_icon_action_camera">\ue607</string>
+    <string name="em_chat_icon_action_audio">\ue608</string>
+    <string name="em_chat_icon_action_video">\ue609</string>
+    <string name="em_chat_icon_action_location">\ue60a</string>
+    <string name="em_chat_icon_action_file">\ue60b</string>
+
+    <string name="em_chat_icon_more_repeal">\ue60c</string>
+    <string name="em_chat_icon_more_record">\ue60d</string>
+    <string name="em_chat_icon_more_trash">\ue60e</string>
+    <string name="em_chat_icon_more_play">\ue60f</string>
+    <string name="em_chat_icon_more_stop">\ue610</string>
+
+    <string name="em_chat_icon_bubble_tail_left">\ue611</string>
+    <string name="em_chat_icon_bubble_tail_right">\ue612</string>
+
+    <string name="em_chat_icon_call_silence">\ue613</string>
+    <string name="em_chat_icon_call_expand">\ue614</string>
+    <string name="em_chat_icon_call_video_play">\ue615</string>
+    <string name="em_chat_icon_call_connect">\ue616</string>
+    <string name="em_chat_icon_call_hangup">\ue617</string>
+
+    <string name="em_chat_icon_buddy_new">\ue618</string>
+    <string name="em_chat_icon_buddy_group">\ue619</string>
+    <string name="em_chat_icon_buddy_room">\ue61a</string>
+    <string name="em_chat_icon_buddy_blacklist">\ue61b</string>
+</resources>

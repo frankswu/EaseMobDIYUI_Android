@@ -7,4 +7,17 @@
     <dimen name="em_common_padding">2dp</dimen>
     <dimen name="em_common_left_right_margin">15dp</dimen>
     <dimen name="em_common_top_bottom_margin">8dp</dimen>
+
+    <dimen name="em_common_small_font">12sp</dimen>
+    <dimen name="em_common_normal_font">16sp</dimen>
+    <dimen name="em_common_bag_font">20sp</dimen>
+
+    <dimen name="em_common_tool_icon_font">28sp</dimen>
+
+    <dimen name="em_common_line_width">1dp</dimen>
+    <dimen name="em_common_line_height">1dp</dimen>
+    <dimen name="em_common_radius">4dp</dimen>
+
+
+    <dimen name="em_chat_tool_height">45dp</dimen>
 </resources>
