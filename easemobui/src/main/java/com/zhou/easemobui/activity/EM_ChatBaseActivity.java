@@ -1,8 +1,10 @@
 package com.zhou.easemobui.activity;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,13 +23,16 @@ public class EM_ChatBaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        View customView = LayoutInflater.from(this).inflate(R.layout.em_action_bar,null);
+        titleView = (TextView) customView.findViewById(R.id.em_action_bar_title);
+        backView = (TextView) customView.findViewById(R.id.em_action_bar_back);
+        leftIconsLayout = (LinearLayout) customView.findViewById(R.id.em_action_bar_left_icons);
+        rightIconsLayout = (LinearLayout) customView.findViewById(R.id.em_action_bar_right_icons);
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        actionBar.setCustomView(R.layout.em_action_bar);
-        titleView = (TextView) actionBar.getCustomView().findViewById(R.id.em_action_bar_title);
-        backView = (TextView) actionBar.getCustomView().findViewById(R.id.em_action_bar_back);
-        leftIconsLayout = (LinearLayout) actionBar.getCustomView().findViewById(R.id.em_action_bar_left_icons);
-        rightIconsLayout = (LinearLayout) actionBar.getCustomView().findViewById(R.id.em_action_bar_right_icons);
+        actionBar.setCustomView(customView, new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.em_common_background)));
     }
 
     @Override

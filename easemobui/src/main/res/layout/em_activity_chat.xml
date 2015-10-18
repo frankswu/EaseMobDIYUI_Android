@@ -1,75 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
-
-    <ListView
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/em_chat_message_swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/em_activity_list_view"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/em_activity_input_tool"/>
-    <RelativeLayout
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/em_chat_message_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_above="@+id/em_activity_input_tool"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/em_chat_message_input_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="@color/em_common_background"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/em_chat_tool_height"
-        android:id="@+id/em_activity_input_tool"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_vertical"
-        android:padding="@dimen/em_common_padding">
+        android:layout_alignParentBottom="true">
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/em_common_line_height"
-            android:background="@color/em_common_line_color"
-            android:layout_alignParentTop="true"/>
-        <com.zhou.easemobui.common.view.EM_IconView
-            android:id="@+id/em_chat_tool_voice"
-            android:text="@string/em_chat_icon_tool_voice"
-            android:gravity="center"
-            android:textSize="@dimen/em_common_tool_icon_font"
-            android:padding="@dimen/em_common_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"/>
-        <EditText
-            android:id="@+id/em_chat_tool_input"
+            android:background="@color/em_common_line_color"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:background="@drawable/em_chat_input_shape"
-            android:padding="@dimen/em_common_padding"
-            android:layout_toRightOf="@+id/em_chat_tool_voice"
-            android:layout_toLeftOf="@+id/em_chat_tool_face"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"/>
-        <com.zhou.easemobui.common.view.EM_IconView
-            android:id="@+id/em_chat_tool_face"
-            android:text="@string/em_chat_icon_tool_face"
-            android:gravity="center"
-            android:textSize="@dimen/em_common_tool_icon_font"
-            android:padding="@dimen/em_common_padding"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/em_chat_tool_action"/>
-        <com.zhou.easemobui.common.view.EM_IconView
-            android:id="@+id/em_chat_tool_action"
-            android:text="@string/em_chat_icon_tool_action"
-            android:gravity="center"
-            android:textSize="@dimen/em_common_tool_icon_font"
-            android:padding="@dimen/em_common_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/em_chat_tool_padding">
+            <com.zhou.easemobui.common.view.EM_IconView
+                android:id="@+id/em_chat_message_tool_voice"
+                android:layout_width="@dimen/em_common_icon_size"
+                android:layout_height="@dimen/em_common_icon_size"
+                android:gravity="center"
+                android:padding="@dimen/em_common_padding"
+                android:textColor="@color/em_icon_color"
+                android:text="@string/em_chat_icon_tool_voice"
+                android:textSize="@dimen/em_common_tool_icon_font" />
+
+            <EditText
+                android:id="@+id/em_chat_message_tool_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="@dimen/em_chat_input_max_height"
+                android:minHeight="@dimen/em_common_icon_size"
+                android:background="@drawable/em_chat_input_shape"
+                android:padding="@dimen/em_common_padding"
+                android:text="[表情]"/>
+
+            <com.zhou.easemobui.common.view.EM_IconView
+                android:id="@+id/em_chat_message_tool_face"
+                android:layout_width="@dimen/em_common_icon_size"
+                android:layout_height="@dimen/em_common_icon_size"
+                android:gravity="center"
+                android:padding="@dimen/em_common_padding"
+                android:textColor="@color/em_icon_color"
+                android:text="@string/em_chat_icon_tool_face"
+                android:textSize="@dimen/em_common_tool_icon_font" />
+
+            <com.zhou.easemobui.common.view.EM_IconView
+                android:id="@+id/em_chat_message_tool_action"
+                android:layout_width="@dimen/em_common_icon_size"
+                android:layout_height="@dimen/em_common_icon_size"
+                android:gravity="center"
+                android:padding="@dimen/em_common_padding"
+                android:textColor="@color/em_icon_color"
+                android:text="@string/em_chat_icon_tool_action"
+                android:textSize="@dimen/em_common_tool_icon_font" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/em_chat_tool_action_height">
+
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

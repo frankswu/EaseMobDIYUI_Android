@@ -5,6 +5,8 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+import com.zhou.easemobui.R;
+
 /**
  * Created by ZhouYuzhen on 15/10/5.
  */
@@ -14,13 +16,13 @@ public class EM_IconView extends TextView {
 
     private static Typeface iconFont;
 
-    public  EM_IconView(Context context){
+    public EM_IconView(Context context) {
         super(context);
         initFont(context);
     }
 
-    public EM_IconView(Context context, AttributeSet attrs){
-        super(context,attrs);
+    public EM_IconView(Context context, AttributeSet attrs) {
+        super(context, attrs);
         initFont(context);
     }
 
@@ -29,20 +31,20 @@ public class EM_IconView extends TextView {
         initFont(context);
     }
 
-    private static Typeface getFont(Context context){
-        if (iconFont == null){
+    private static Typeface getFont(Context context) {
+        if (iconFont == null) {
             synchronized (EM_IconView.class) {
                 if (iconFont == null && context != null) {
-                    iconFont = Typeface.createFromAsset(context.getAssets(),EM_CHAT_ICON_FONT_NAME + ".ttf");
+                    iconFont = Typeface.createFromAsset(context.getAssets(), EM_CHAT_ICON_FONT_NAME + ".ttf");
                 }
             }
         }
         return iconFont;
     }
 
-    private void initFont(Context context){
+    private void initFont(Context context) {
         Typeface font = getFont(context);
-        if (font != null){
+        if (font != null) {
             setTypeface(font);
         }
     }
