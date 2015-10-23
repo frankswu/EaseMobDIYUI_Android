@@ -26,10 +26,12 @@
         <service android:name="com.easemob.chat.EMChatService" />
 
         <activity
-            android:name=".activity.EM_ChatBaseActivity"
-            android:theme="@style/AlertDialog.AppCompat.Light">
-        </activity>
-        <activity android:name=".activity.EM_ChatActivity"></activity>
+            android:name=".common.EM_ChatBaseActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/AlertDialog.AppCompat.Light" />
+        <activity
+            android:name=".chat.activity.EM_ChatActivity"
+            android:configChanges="keyboardHidden|orientation" />
     </application>
 
 </manifest>

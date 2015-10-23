@@ -32,7 +32,7 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="@dimen/em_chat_tool_padding">
-            <com.zhou.easemobui.common.view.EM_IconView
+            <com.zhou.easemobui.chat.view.EM_IconView
                 android:id="@+id/em_chat_message_tool_voice"
                 android:layout_width="@dimen/em_common_icon_size"
                 android:layout_height="@dimen/em_common_icon_size"
@@ -42,7 +42,7 @@
                 android:text="@string/em_chat_icon_tool_voice"
                 android:textSize="@dimen/em_common_tool_icon_font" />
 
-            <EditText
+            <com.zhou.easemobui.common.view.EM_EmojiEditText
                 android:id="@+id/em_chat_message_tool_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -50,11 +50,10 @@
                 android:maxHeight="@dimen/em_chat_input_max_height"
                 android:minHeight="@dimen/em_common_icon_size"
                 android:background="@drawable/em_chat_input_shape"
-                android:padding="@dimen/em_common_padding"
-                android:text="[表情]"/>
+                android:padding="@dimen/em_common_padding"/>
 
-            <com.zhou.easemobui.common.view.EM_IconView
-                android:id="@+id/em_chat_message_tool_face"
+            <com.zhou.easemobui.chat.view.EM_IconView
+                android:id="@+id/em_chat_message_tool_emoji"
                 android:layout_width="@dimen/em_common_icon_size"
                 android:layout_height="@dimen/em_common_icon_size"
                 android:gravity="center"
@@ -63,7 +62,7 @@
                 android:text="@string/em_chat_icon_tool_face"
                 android:textSize="@dimen/em_common_tool_icon_font" />
 
-            <com.zhou.easemobui.common.view.EM_IconView
+            <com.zhou.easemobui.chat.view.EM_IconView
                 android:id="@+id/em_chat_message_tool_action"
                 android:layout_width="@dimen/em_common_icon_size"
                 android:layout_height="@dimen/em_common_icon_size"
@@ -74,8 +73,10 @@
                 android:textSize="@dimen/em_common_tool_icon_font" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/em_chat_message_tool_more"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/em_chat_tool_action_height">
+            android:layout_height="@dimen/em_chat_tool_action_height"
+            android:orientation="vertical">
 
         </LinearLayout>
     </LinearLayout>

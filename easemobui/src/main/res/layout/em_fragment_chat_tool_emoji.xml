@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/em_common_background">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/em_fragment_chat_tool_emoji_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/em_fragment_chat_tool_emoji_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_chat_tool_indicator"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_line_height"
+        android:background="@color/em_common_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_chat_tool_emoji_tool"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/em_fragment_chat_tool_emoji_lately"
+                    android:layout_width="@dimen/em_common_button"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/em_common_lately" />
+
+                <TextView
+                    android:id="@+id/em_fragment_chat_tool_emoji_emoji"
+                    android:layout_width="@dimen/em_common_button"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/em_common_emoji" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/em_fragment_chat_tool_emoji_send"
+            android:layout_width="@dimen/em_common_button"
+            android:layout_height="match_parent"
+            android:background="@color/em_common_text_selected"
+            android:gravity="center"
+            android:text="@string/em_common_send"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

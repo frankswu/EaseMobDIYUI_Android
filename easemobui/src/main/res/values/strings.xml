@@ -4,4 +4,22 @@
     <string name="em_common_enter">确定</string>
     <string name="em_common_cancel">取消</string>
     <string name="em_common_title">标题</string>
+    <string name="em_common_send">发送</string>
+    <string name="em_common_lately">最近</string>
+    <string name="em_common_emoji">Emoji</string>
+    
+    <string name="em_common_action_image">图片</string>
+    <string name="em_common_action_camera">相机</string>
+    <string name="em_common_action_audio">语音</string>
+    <string name="em_common_action_video">视频</string>
+    <string name="em_common_action_location">位置</string>
+    <string name="em_common_action_file">文件</string>
+    <string-array name="em_common_default_action_title">
+        <item>@string/em_common_action_image</item>
+        <item>@string/em_common_action_camera</item>
+        <item>@string/em_common_action_audio</item>
+        <item>@string/em_common_action_video</item>
+        <item>@string/em_common_action_location</item>
+        <item>@string/em_common_action_file</item>
+    </string-array>
 </resources>

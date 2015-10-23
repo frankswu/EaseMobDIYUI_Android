@@ -7,12 +7,14 @@
     <dimen name="em_common_padding">2dp</dimen>
     <dimen name="em_common_left_right_margin">15dp</dimen>
     <dimen name="em_common_top_bottom_margin">8dp</dimen>
+    <dimen name="em_common_button">65dp</dimen>
 
     <dimen name="em_common_small_font">12sp</dimen>
     <dimen name="em_common_normal_font">16sp</dimen>
     <dimen name="em_common_bag_font">20sp</dimen>
+    <dimen name="em_common_chat_res_font">14sp</dimen>
+    <dimen name="em_common_tool_icon_font">25sp</dimen>
 
-    <dimen name="em_common_tool_icon_font">30sp</dimen>
 
     <dimen name="em_common_line_width">1dp</dimen>
     <dimen name="em_common_line_height">1dp</dimen>
@@ -22,6 +24,10 @@
     <dimen name="em_chat_tool_height">52dp</dimen>
     <dimen name="em_chat_tool_padding">5dp</dimen>
     <dimen name="em_chat_input_max_height">200dp</dimen>
-    <dimen name="em_chat_tool_action_height">200dp</dimen>
 
+    <dimen name="em_chat_tool_action_height">250dp</dimen>
+    <dimen name="em_chat_tool_indicator">25dp</dimen>
+    <dimen name="em_chat_tool_indicator_dot">20dp</dimen>
+    <dimen name="em_chat_tool_indicator_dot_radius">10dp</dimen>
+    <dimen name="em_chat_tool_emoji_tool">44dp</dimen>
 </resources>
