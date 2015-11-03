@@ -4,42 +4,48 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical">
+
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/em_chat_message_swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ListView
             android:id="@+id/em_chat_message_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/white"
-            android:layout_above="@+id/em_activity_input_tool"/>
+            android:layout_above="@+id/em_activity_input_tool"
+            android:background="@android:color/white" />
     </android.support.v4.widget.SwipeRefreshLayout>
+
     <LinearLayout
         android:id="@+id/em_chat_message_input_tool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
         android:background="@color/em_common_background"
-        android:layout_alignParentBottom="true">
+        android:orientation="vertical">
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/em_common_line_height"
-            android:background="@color/em_common_line_color"/>
+            android:background="@color/em_common_line_color" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="@dimen/em_chat_tool_padding">
+
             <com.zhou.easemobui.chat.view.EM_IconView
                 android:id="@+id/em_chat_message_tool_voice"
                 android:layout_width="@dimen/em_common_icon_size"
                 android:layout_height="@dimen/em_common_icon_size"
                 android:gravity="center"
                 android:padding="@dimen/em_common_padding"
-                android:textColor="@color/em_icon_color"
                 android:text="@string/em_chat_icon_tool_voice"
+                android:textColor="@color/em_icon_color"
                 android:textSize="@dimen/em_common_tool_icon_font" />
 
             <com.zhou.easemobui.common.view.EM_EmojiEditText
@@ -47,10 +53,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/em_chat_input_shape"
                 android:maxHeight="@dimen/em_chat_input_max_height"
                 android:minHeight="@dimen/em_common_icon_size"
-                android:background="@drawable/em_chat_input_shape"
-                android:padding="@dimen/em_common_padding"/>
+                android:padding="@dimen/em_common_padding" />
 
             <com.zhou.easemobui.chat.view.EM_IconView
                 android:id="@+id/em_chat_message_tool_emoji"
@@ -58,8 +64,8 @@
                 android:layout_height="@dimen/em_common_icon_size"
                 android:gravity="center"
                 android:padding="@dimen/em_common_padding"
-                android:textColor="@color/em_icon_color"
                 android:text="@string/em_chat_icon_tool_face"
+                android:textColor="@color/em_icon_color"
                 android:textSize="@dimen/em_common_tool_icon_font" />
 
             <com.zhou.easemobui.chat.view.EM_IconView
@@ -68,15 +74,17 @@
                 android:layout_height="@dimen/em_common_icon_size"
                 android:gravity="center"
                 android:padding="@dimen/em_common_padding"
-                android:textColor="@color/em_icon_color"
                 android:text="@string/em_chat_icon_tool_action"
+                android:textColor="@color/em_icon_color"
                 android:textSize="@dimen/em_common_tool_icon_font" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/em_chat_message_tool_more"
             android:layout_width="match_parent"
             android:layout_height="@dimen/em_chat_tool_action_height"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
         </LinearLayout>
     </LinearLayout>

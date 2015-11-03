@@ -30,4 +30,5 @@
     <dimen name="em_chat_tool_indicator_dot">20dp</dimen>
     <dimen name="em_chat_tool_indicator_dot_radius">10dp</dimen>
     <dimen name="em_chat_tool_emoji_tool">44dp</dimen>
+    <dimen name="em_chat_tool_voice_action">44dp</dimen>
 </resources>

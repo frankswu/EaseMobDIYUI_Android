@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/em_common_background">
+    android:background="@color/em_common_background"
+    android:orientation="vertical">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/em_fragment_chat_tool_voice_pager"
@@ -11,12 +11,40 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <View
+        android:id="@+id/em_fragment_chat_tool_voice_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_line_height"
+        android:background="@color/em_common_line_color" />
+
     <LinearLayout
         android:id="@+id/em_fragment_chat_tool_voice_indicator"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/em_chat_tool_indicator"
+        android:layout_height="@dimen/em_chat_tool_voice_action"
         android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/em_fragment_chat_tool_voice_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/em_common_cancel"
+            android:textColor="@color/em_common_text_selected" />
+
+        <View
+            android:layout_width="@dimen/em_common_line_width"
+            android:layout_height="match_parent"
+            android:background="@color/em_common_line_color" />
+
+        <TextView
+            android:id="@+id/em_fragment_chat_tool_voice_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/em_common_send"
+            android:textColor="@color/em_common_text_selected" />
     </LinearLayout>
 
 </LinearLayout>

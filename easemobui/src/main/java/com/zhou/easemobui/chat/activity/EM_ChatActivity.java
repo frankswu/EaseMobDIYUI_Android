@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,6 +30,7 @@ public class EM_ChatActivity extends EM_ChatBaseActivity implements
 
     private SwipeRefreshLayout refreshLayout;
     private ListView mListView;
+    private View mChatToolMore;
     private TextView mActionTv;
     private TextView mEmojiTv;
     private TextView mVoiceTv;
@@ -60,6 +63,7 @@ public class EM_ChatActivity extends EM_ChatBaseActivity implements
         mEmojiTv.setOnClickListener(this);
         mVoiceTv = (TextView) findViewById(R.id.em_chat_message_tool_voice);
         mVoiceTv.setOnClickListener(this);
+        mChatToolMore = findViewById(R.id.em_chat_message_tool_more);
     }
 
     @Override
@@ -123,6 +127,17 @@ public class EM_ChatActivity extends EM_ChatBaseActivity implements
 
             transaction.commit();
             mHideToolFragment = showToolFragment;
+        }
+
+        if (mChatToolMore.getVisibility() == View.GONE) {
+            TranslateAnimation mShowAction = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0.0f,
+                    Animation.RELATIVE_TO_SELF, 0.0f,
+                    Animation.RELATIVE_TO_SELF, 1.0f,
+                    Animation.RELATIVE_TO_SELF, 0.0f);
+            mShowAction.setDuration(500);
+            mChatToolMore.startAnimation(mShowAction);
+            mChatToolMore.setVisibility(View.VISIBLE);
         }
     }
 
