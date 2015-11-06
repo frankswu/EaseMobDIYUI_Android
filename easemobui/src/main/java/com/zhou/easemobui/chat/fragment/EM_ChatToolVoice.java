@@ -1,7 +1,6 @@
 package com.zhou.easemobui.chat.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +9,12 @@ import android.widget.LinearLayout;
 
 import com.zhou.easemobui.R;
 import com.zhou.easemobui.chat.adapter.EM_ChatToolVoiceAdapter;
+import com.zhou.easemobui.common.EM_ChatBaseFragment;
 
 /**
  * Created by ZhouYuzhen on 15/10/22.
  */
-public class EM_ChatToolVoice extends Fragment {
+public class EM_ChatToolVoice extends EM_ChatBaseFragment {
 
     private ViewPager mViewPager;
     private LinearLayout mIndicator;

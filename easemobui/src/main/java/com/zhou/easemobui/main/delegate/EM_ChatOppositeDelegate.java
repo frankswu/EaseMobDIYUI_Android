@@ -1,8 +1,8 @@
 package com.zhou.easemobui.main.delegate;
 
-import com.zhou.easemobui.buddy.EM_ChatBuddy;
-import com.zhou.easemobui.buddy.EM_ChatGroup;
-import com.zhou.easemobui.buddy.EM_ChatRoom;
+import com.zhou.easemobui.model.opposite.EM_ChatBuddy;
+import com.zhou.easemobui.model.opposite.EM_ChatGroup;
+import com.zhou.easemobui.model.opposite.EM_ChatRoom;
 
 /**
  * Created by ZhouYuzhen on 15/10/28.

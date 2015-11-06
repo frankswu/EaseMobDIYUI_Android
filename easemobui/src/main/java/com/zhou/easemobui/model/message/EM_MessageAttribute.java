@@ -1,4 +1,4 @@
-package com.zhou.easemobui.model;
+package com.zhou.easemobui.model.message;
 
 /**
  * Created by ZhouYuzhen on 15/11/3.

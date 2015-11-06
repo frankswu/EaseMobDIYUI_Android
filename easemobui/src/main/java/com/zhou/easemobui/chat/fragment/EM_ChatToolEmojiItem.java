@@ -1,7 +1,6 @@
 package com.zhou.easemobui.chat.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +9,12 @@ import android.widget.GridView;
 
 import com.zhou.easemobui.R;
 import com.zhou.easemobui.chat.adapter.EM_ChatToolEmojiItemAdapter;
+import com.zhou.easemobui.common.EM_ChatBaseFragment;
 
 /**
  * Created by ZhouYuzhen on 15/10/23.
  */
-public class EM_ChatToolEmojiItem extends Fragment implements AdapterView.OnItemClickListener {
+public class EM_ChatToolEmojiItem extends EM_ChatBaseFragment implements AdapterView.OnItemClickListener {
 
     private int mPagerIndex;
     private GridView mGridView;

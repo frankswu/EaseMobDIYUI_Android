@@ -1,4 +1,4 @@
-package com.zhou.easemobui.model;
+package com.zhou.easemobui.model.message;
 
 import com.easemob.chat.EMMessage;
 

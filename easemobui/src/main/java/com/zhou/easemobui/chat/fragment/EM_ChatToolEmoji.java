@@ -1,8 +1,6 @@
 package com.zhou.easemobui.chat.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +10,13 @@ import android.widget.TextView;
 
 import com.zhou.easemobui.R;
 import com.zhou.easemobui.chat.adapter.EM_ChatToolEmojiAdapter;
+import com.zhou.easemobui.common.EM_ChatBaseFragment;
 import com.zhou.easemobui.common.emoji.Emoji;
 
 /**
  * Created by ZhouYuzhen on 15/10/22.
  */
-public class EM_ChatToolEmoji extends Fragment implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class EM_ChatToolEmoji extends EM_ChatBaseFragment implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     public static final String EMOJI_PAGER_INDEX = "EMOJI_PAGER_INDEX";
     public static final int EMOJI_PAGER_ITME_COUNT = 23;

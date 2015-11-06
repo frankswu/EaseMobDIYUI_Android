@@ -2,9 +2,7 @@ package com.zhou.easemobui.chat.fragment;
 
 import android.app.Activity;
 import android.database.DataSetObserver;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,12 +14,13 @@ import com.zhou.easemobui.R;
 import com.zhou.easemobui.chat.activity.EM_ChatActivity;
 import com.zhou.easemobui.chat.adapter.EM_ChatToolActionAdapter;
 import com.zhou.easemobui.chat.implement.EM_ChatToolConfig;
+import com.zhou.easemobui.common.EM_ChatBaseFragment;
 
 
 /**
  * Created by ZhouYuzhen on 15/10/22.
  */
-public class EM_ChatToolAction extends Fragment implements ViewPager.OnPageChangeListener {
+public class EM_ChatToolAction extends EM_ChatBaseFragment implements ViewPager.OnPageChangeListener {
 
     public static final String ACTION_PAGER_INDEX = "ACTION_PAGER_INDEX";
     public static final int ACTION_PAGER_ITEM_COUNT = 8;

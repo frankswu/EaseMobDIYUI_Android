@@ -2,7 +2,6 @@ package com.zhou.easemobui.chat.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +12,9 @@ import com.zhou.easemobui.R;
 import com.zhou.easemobui.chat.activity.EM_ChatActivity;
 import com.zhou.easemobui.chat.adapter.EM_ChatToolActionItemAdapter;
 import com.zhou.easemobui.chat.implement.EM_ChatToolConfig;
+import com.zhou.easemobui.common.EM_ChatBaseFragment;
 
-public class EM_ChatToolActionItem extends Fragment implements AdapterView.OnItemClickListener {
+public class EM_ChatToolActionItem extends EM_ChatBaseFragment implements AdapterView.OnItemClickListener {
 
     private int mPagerIndex;
     private GridView mGridView;
