@@ -1,8 +1,8 @@
 package com.zhou.easemobui.chat.fragment;
 
-import android.app.Activity;
 import android.database.DataSetObserver;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zhou.easemobui.R;
-import com.zhou.easemobui.chat.activity.EM_ChatActivity;
 import com.zhou.easemobui.chat.adapter.EM_ChatToolActionAdapter;
 import com.zhou.easemobui.chat.implement.EM_ChatToolConfig;
 import com.zhou.easemobui.common.EM_ChatBaseFragment;
@@ -111,9 +110,9 @@ public class EM_ChatToolAction extends EM_ChatBaseFragment implements ViewPager.
 
     //获取用户UI配置
     public EM_ChatToolConfig getToolConfig() {
-        Activity activity = getActivity();
-        if (activity instanceof EM_ChatActivity) {
-            EM_ChatToolConfig config = ((EM_ChatActivity) getActivity()).getToolConfig();
+        Fragment fragment = getParentFragment();
+        if (fragment != null && fragment instanceof EM_ChatFragment) {
+            EM_ChatToolConfig config = ((EM_ChatFragment) fragment).getToolConfig();
             if (config != mToolConfig) {
                 mToolConfig = config;
             }

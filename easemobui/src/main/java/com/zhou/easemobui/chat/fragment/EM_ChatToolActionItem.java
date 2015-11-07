@@ -2,6 +2,7 @@ package com.zhou.easemobui.chat.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,9 +49,9 @@ public class EM_ChatToolActionItem extends EM_ChatBaseFragment implements Adapte
 
     //获取用户UI配置
     public EM_ChatToolConfig getToolConfig() {
-        Activity activity = getActivity();
-        if (activity instanceof EM_ChatActivity) {
-            EM_ChatToolConfig config = ((EM_ChatActivity) getActivity()).getToolConfig();
+        Fragment fragment = getParentFragment();
+        if (fragment != null && fragment instanceof EM_ChatToolAction) {
+            EM_ChatToolConfig config = ((EM_ChatToolAction) fragment).getToolConfig();
             if (config != mToolConfig) {
                 mToolConfig = config;
             }
