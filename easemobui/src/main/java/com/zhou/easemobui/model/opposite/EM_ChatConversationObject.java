@@ -8,25 +8,63 @@ import android.os.Parcelable;
  */
 public class EM_ChatConversationObject implements Parcelable {
 
+    public final static String KEY_CONVERSATION_OBJECT = "KEY_CONVERSATION_OBJECT";
+
+    //if conversation object is null,the conversation uid and type is must
+    public final static String KEY_CONVERSATION_UID = "KEY_CONVERSATION_UID";
+    public final static String KEY_CONVERSATION_TYPE = "KEY_CONVERSATION_TYPE";
+
     /**
-     *  唯一标示
+     *  唯一标示,EaseMob username
      */
-    public String uid;
+    private String uid;
 
     /**
      *  头像地址
      */
-    public String avatar;
+    private String avatar;
 
     /**
      *  显示的名称
      */
-    public String displayName;
+    private String displayName;
 
     /**
      *  简单的描述文字
      */
-    public String intro;
+    private String intro;
+
+    public EM_ChatConversationObject(String uid){
+        this.uid = uid;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public String getIntro() {
+        return intro;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
 
     /**
      *  是否是聊天对方; false 标示是自己 true 标示聊天对方
@@ -38,9 +76,9 @@ public class EM_ChatConversationObject implements Parcelable {
 
     EM_ChatConversationObject(Parcel source){
         this.uid = source.readString();
-        this.avatar = source.readString();
-        this.displayName = source.readString();
-        this.intro = source.readString();
+        this.setAvatar(source.readString());
+        this.setDisplayName(source.readString());
+        this.setIntro(source.readString());
     }
 
     @Override
@@ -50,10 +88,10 @@ public class EM_ChatConversationObject implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.uid);
-        dest.writeString(this.avatar);
-        dest.writeString(this.displayName);
-        dest.writeString(this.intro);
+        dest.writeString(this.getUid());
+        dest.writeString(this.getAvatar());
+        dest.writeString(this.getDisplayName());
+        dest.writeString(this.getIntro());
     }
 
     public static final Parcelable.Creator<EM_ChatConversationObject> CREATOR = new Parcelable.Creator<EM_ChatConversationObject>() {

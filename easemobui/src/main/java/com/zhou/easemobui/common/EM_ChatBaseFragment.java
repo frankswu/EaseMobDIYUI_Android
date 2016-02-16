@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
  */
 public class EM_ChatBaseFragment extends Fragment {
 
+    private static final String TAG = EM_ChatBaseFragment.class.getName();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

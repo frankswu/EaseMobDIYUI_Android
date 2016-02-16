@@ -8,17 +8,41 @@ import android.os.Parcelable;
  */
 public class EM_ChatUser extends EM_ChatConversationObject {
 
+    private String name;
+
+    public EM_ChatUser(String uid) {
+        super(uid);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDisplayName() {
+        String displayName = super.getDisplayName();
+        if (displayName == null) {
+            displayName = this.getName();
+        }
+        return displayName;
+    }
+
     public boolean isOpposite() {
         return false;
     }
 
     EM_ChatUser(Parcel source) {
         super(source);
+        this.setName(source.readString());
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         super.writeToParcel(dest, flags);
+        dest.writeString(this.getName());
     }
 
     public static final Parcelable.Creator<EM_ChatUser> CREATOR = new Parcelable.Creator<EM_ChatUser>() {

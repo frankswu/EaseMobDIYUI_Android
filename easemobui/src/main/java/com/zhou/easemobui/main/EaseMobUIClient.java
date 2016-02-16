@@ -15,8 +15,8 @@ public class EaseMobUIClient {
     private static EaseMobUIClient client;
 
     public static EaseMobUIClient sharedInstance() {
-        if (client == null) {
-            synchronized (EaseMobUIClient.class) {
+        synchronized (EaseMobUIClient.class) {
+            if (client == null) {
                 client = new EaseMobUIClient();
             }
         }

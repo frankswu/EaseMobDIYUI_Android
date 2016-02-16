@@ -8,22 +8,48 @@ import android.os.Parcelable;
  */
 public class EM_ChatOpposite extends EM_ChatConversationObject {
 
-    public enum EMChatOppositeType{
-        EMChatOppositeTypeNone,
-        EMChatOppositeTypeChat,
-        EMChatOppositeTypeGroup,
-        EMChatOppositeTypeRoom
+    public enum EM_ChatOppositeType {
+        EM_ChatOppositeTypeNone(0),//do not use
+        EM_ChatOppositeTypeChat(1),
+        EM_ChatOppositeTypeGroup(2),
+        EM_ChatOppositeTypeRoom(3);
+
+        private int oppositeId;
+
+        EM_ChatOppositeType(int id) {
+            oppositeId = id;
+        }
+
+        public int getOppositeId() {
+            return oppositeId;
+        }
+
+        public static EM_ChatOppositeType getOppositeTypeById(int oppositeId) {
+            if (oppositeId == EM_ChatOppositeTypeChat.getOppositeId()) {
+                return EM_ChatOppositeTypeChat;
+            } else if (oppositeId == EM_ChatOppositeTypeGroup.getOppositeId()) {
+                return EM_ChatOppositeTypeGroup;
+            } else if (oppositeId == EM_ChatOppositeTypeRoom.getOppositeId()) {
+                return EM_ChatOppositeTypeRoom;
+            } else {
+                return EM_ChatOppositeTypeNone;
+            }
+        }
     }
 
-    public EMChatOppositeType oppositeType(){
-        return EMChatOppositeType.EMChatOppositeTypeNone;
+    public EM_ChatOpposite(String uid){
+        super(uid);
     }
 
-    public boolean isOpposite(){
+    public EM_ChatOppositeType oppositeType() {
+        return EM_ChatOppositeType.EM_ChatOppositeTypeNone;
+    }
+
+    public boolean isOpposite() {
         return true;
     }
 
-    EM_ChatOpposite(Parcel source){
+    EM_ChatOpposite(Parcel source) {
         super(source);
     }
 
@@ -37,6 +63,7 @@ public class EM_ChatOpposite extends EM_ChatConversationObject {
         public EM_ChatOpposite createFromParcel(Parcel source) {
             return new EM_ChatOpposite(source);
         }
+
         @Override
         public EM_ChatOpposite[] newArray(int size) {
             return new EM_ChatOpposite[size];
